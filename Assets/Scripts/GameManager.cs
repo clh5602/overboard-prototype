@@ -5,8 +5,8 @@ using static System.Net.Mime.MediaTypeNames;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public UnityEngine.UI.Text scoreText;
-    public GameObject timerText;
+    public TextMesh scoreText;
+    public TextMesh timerText;
 
 public GameObject gameOverPanel;
 
