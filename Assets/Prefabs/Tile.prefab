@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5183938011254330359}
   - component: {fileID: 192042573459386006}
   - component: {fileID: 3680519640175805090}
+  - component: {fileID: 2581081436072471984}
+  - component: {fileID: 2388750769685955149}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -104,7 +106,35 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2581081436072471984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303148282628593208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca49f59b1e74eae4496babc2dd1bbc22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debris:
+  - {fileID: 3667856513492389792, guid: 06d234d702a9e4a4f871f72bdab7693b, type: 3}
+  - {fileID: 6889132631508640192, guid: cadf8ccca7ef9354eb7ca8e5ef4286e5, type: 3}
+  coin: {fileID: 6353338461825792974, guid: 1be9e1090abf95444891654d8d7ab348, type: 3}
+--- !u!114 &2388750769685955149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303148282628593208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa457d0904c8fc409620aab7c90c699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

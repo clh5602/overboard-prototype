@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -51,5 +52,56 @@ public class TileBoardPopulator : MonoBehaviour
                 xOffset += (int)tile.GetComponent<Renderer>().bounds.size.x;
             }
         }
+
+        InstantiateDebris();
+        InstantiateCoins();
     }
+
+    private void InstantiateDebris()
+    {
+        int maxDebris = (int)(amount * 0.45f);
+        int counter = 0;
+
+        // place debris randomly
+        for (int i = 0; i < amount; i++)
+        {
+
+            if (UnityEngine.Random.Range(0, 2) > 0)
+            {
+                tiles[i].GetComponent<TileScript>().SpawnDebris(.001 + i * .001);
+                counter++;
+            }
+
+            // ensure we aren't putting too much debris
+            if (counter >= maxDebris)
+            {
+                break;
+            }
+        }
+
+    }
+
+    private void InstantiateCoins()
+    {
+        int maxCoins = (int)(amount * 0.4f);
+        int counter = 0;
+
+        // place coins randomly
+        for (int i = 0; i < amount; i++)
+        {
+
+            if (UnityEngine.Random.Range(0, 2) > 0)
+            {
+                tiles[i].GetComponent<TileScript>().SpawnCoin();
+                counter++;
+            }
+
+            // ensure we aren't putting too much debris
+            if (counter >= maxCoins)
+            {
+                break;
+            }
+        }
+    }
+
 }
